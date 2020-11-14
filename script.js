@@ -4,12 +4,17 @@ const projects = [
     "url": "instagram_search",
     "description": "Uma tela com campo de usuario para você pesquisar informações do usuario no Instagram."
   },
+  {
+    "title": "EM BREVE! [Design Login]",
+    "url": null,
+    "description": "Tela de login para minhsa aplicações futuras"
+  },
 ]
 
 function renderProject(project){
   const { title, url, description } = project;
 
-  if(!title || !description || !url)
+  if(!title || !description)
     return false;
 
   //project element
@@ -28,7 +33,7 @@ function renderProject(project){
 
   const buttonElement = document.createElement('a');
   buttonElement.textContent = "Abrir";
-  buttonElement.href = `/sources/${url}`;
+  buttonElement.href = url ? `/sources/${url}` : "#";
 
   //adding elements in the features element ( div )
   featuresElement.appendChild(descriptionElement);
@@ -39,6 +44,18 @@ function renderProject(project){
   projectElement.appendChild(featuresElement);
 
   document.getElementsByClassName('projects')[0].appendChild(projectElement);
+}
+
+function filterProjects(){
+  const tag = document.getElementById("inputproject").value;
+  if(!tag) return;
+
+  let projectsFilted = projects.filter(project => project.title.includes(tag.toUpperCase()));
+  if(projectsFilted.length == 0) 
+    projectsFilted = projects;
+
+  document.getElementsByClassName('projects')[0].textContent = "";
+  projectsFilted.forEach(project => renderProject(project));
 }
 
 (function(){
