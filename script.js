@@ -11,6 +11,11 @@ const projects = [
   },
 ]
 
+function refreshProjects(projects){
+  document.getElementsByClassName('projects')[0].textContent = "";
+  projects.forEach(project => renderProject(project));
+}
+
 function renderProject(project){
   const { title, url, description } = project;
 
@@ -50,17 +55,17 @@ document.getElementsByTagName("form")[0].addEventListener('submit', (event) => {
   event.preventDefault();
   const inputproject = document.getElementById("inputproject")
   const tag = inputproject.value;
-  if(!tag) return;
+  if(!tag) return refreshProjects(projects);
 
   let projectsFilted = projects.filter(project => project.title.includes(tag.toUpperCase()));
   if(projectsFilted.length == 0){
     projectsFilted = projects;
     inputproject.style.color = "red";
-    
   }
-  else{ inputproject.style.color = "#000"; }
-  document.getElementsByClassName('projects')[0].textContent = "";
-  projectsFilted.forEach(project => renderProject(project));
+  else{ 
+    inputproject.style.color = "#000"; 
+  }
+  return refreshProjects(projectsFilted);
 });
 
 (function(){
