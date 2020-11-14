@@ -1,0 +1,111 @@
+body{
+  height: 100vh;
+  background: #aaa;
+}
+
+a {
+  color: white;
+}
+
+.header {
+  background: #000;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: center;
+  font-family: Arial;
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.nav ul {
+  display: flex;
+}
+
+.nav ul li a{
+  background: tomato;
+  margin: 0 10px;
+  font-size: 1.4rem;
+  text-decoration: none;
+  padding: 10px;
+  color: white;
+}
+
+.nav ul li a:hover{
+  background: #fff;
+  color: #000;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 10px;
+  padding: 10px;
+  background: #fff;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.container div {
+  margin: 5px;
+  padding: 5px;
+  background: #f3f3f3;
+}
+
+.formSearch{
+  display: flex;
+  align-items: center;
+}
+
+.formSearch div{
+  margin: 0 10px;
+}
+
+.formSearch h2{
+  font-size: 1.8rem;
+  margin-bottom: 4px;
+}
+
+.formSearch form{
+  height: 40px;
+  padding: 10px;
+  display: flex;
+}
+
+.formSearch form input{
+  width: 250px;
+  padding: 10px;
+  display: flex;
+}
+
+.formSearch form button{
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  width: 40px;
+  display: flex;
+}
+
+.container form{
+  /* display: flex;
+  justify-content: space-between; */
+  /* justify-content: space-between;
+  flex-direction: row;
+  background: turquoise;
+  justify-content: center;
+  margin-bottom: 10px; */
+}
+
+.container div {
+  /* width: 100%;
+  background: #aaa; */
+}
