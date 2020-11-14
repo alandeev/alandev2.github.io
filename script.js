@@ -46,7 +46,8 @@ function renderProject(project){
   document.getElementsByClassName('projects')[0].appendChild(projectElement);
 }
 
-function filterProjects(){
+document.getElementsByTagName("form")[0].addEventListener('submit', (event) => {
+  event.preventDefault();
   const tag = document.getElementById("inputproject").value;
   if(!tag) return;
 
@@ -56,7 +57,7 @@ function filterProjects(){
 
   document.getElementsByClassName('projects')[0].textContent = "";
   projectsFilted.forEach(project => renderProject(project));
-}
+});
 
 (function(){
   projects.forEach(project => renderProject(project));
