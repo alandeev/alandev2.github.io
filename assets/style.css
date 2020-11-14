@@ -153,6 +153,14 @@ a {
   background: #000;
 }
 
+.success {
+  color: #000;
+}
+
+.failed {
+  color: red;
+}
+
 @media(max-width: 651px){
   .projects .features p {
     margin: 15px 0;

@@ -48,13 +48,17 @@ function renderProject(project){
 
 document.getElementsByTagName("form")[0].addEventListener('submit', (event) => {
   event.preventDefault();
-  const tag = document.getElementById("inputproject").value;
+  const inputproject = document.getElementById("inputproject")
+  const tag = inputproject.value;
   if(!tag) return;
 
   let projectsFilted = projects.filter(project => project.title.includes(tag.toUpperCase()));
-  if(projectsFilted.length == 0) 
+  if(projectsFilted.length == 0){
     projectsFilted = projects;
-
+    inputproject.style.color = "red";
+    
+  }
+  else{ inputproject.style.color = "#000"; }
   document.getElementsByClassName('projects')[0].textContent = "";
   projectsFilted.forEach(project => renderProject(project));
 });
