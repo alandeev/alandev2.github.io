@@ -1,6 +1,10 @@
+*{
+  font-family: Arial;
+  font-size: 1.2rem;
+}
+
 body{
   height: 100vh;
-  background: #aaa;
 }
 
 a {
@@ -50,6 +54,7 @@ a {
 
 .container {
   margin: 0 auto;
+  width: 90%;
   padding: 10px;
   display: flex;
   flex-direction: column;
@@ -58,11 +63,13 @@ a {
 .container div {
   margin: 5px;
   padding: 5px;
-  background: #f3f3f3;
+  /* background: #f3f3f3; */
 }
 
 .formSearch{
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -76,13 +83,12 @@ a {
 }
 
 .formSearch form{
-  height: 40px;
-  padding: 10px;
+  height: 35dpx;
   display: flex;
 }
 
 .formSearch form input{
-  width: 250px;
+  width: 150px;
   padding: 10px;
   display: flex;
 }
@@ -95,17 +101,68 @@ a {
   display: flex;
 }
 
-.container form{
-  /* display: flex;
-  justify-content: space-between; */
-  /* justify-content: space-between;
-  flex-direction: row;
-  background: turquoise;
-  justify-content: center;
-  margin-bottom: 10px; */
+.projects {
+  box-shadow: 10px 10px 8px #aaa;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-height: 500px;
+  background: #f3f3f3;
+  width:100%;
+  overflow:hidden; 
+  overflow-y:scroll;
+}
+.projects li{
+  min-height: 80px;
+  background: #fff;
+  margin: 5px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
 }
 
-.container div {
-  /* width: 100%;
-  background: #aaa; */
+.projects h2{
+  font-size: 1.4rem;
+}
+
+.projects .features{  
+  margin: 0;
+  padding: 0;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  /* background: #fff; */
+  display: flex;
+  justify-content: space-between;
+}
+
+.projects .features p {
+  color: #aaa;
+  margin-bottom: 10px;
+}
+
+/* //FALTA TERMINAR ISSO AQUI QUANDO CHEGAR DEIXA O BUTTON ORGANIZADO */
+.projects .features a {  
+  text-align: center;
+  background: tomato;
+  padding: 10px 30px;
+}
+
+.projects .features a:hover {  
+  background: #000;
+}
+
+@media(max-width: 650px){
+  .projects .features p {
+    margin: 15px 0;
+  }
+
+  .projects .features a {  
+    width: 100%;
+  }
+
+  .formSearch{
+    justify-content: center;
+  }
 }

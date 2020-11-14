@@ -1,46 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="sources/reset.css">
-   <link rel="stylesheet" href="assets/style.css">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-   <title>AlanDev2 Home</title>
-</head>
-<body>
-   <header class="header">
-      <div class="title">
-         <a href="">AlanDev2</a>
-      </div>
-      <nav class="nav">
-         <ul>
-            <li>
-               <a href="">Contato</a>
-            </li>
-         </ul>
-      </nav>
-   </header>
-   <section class="section">
-      <div class="container">
-         <div class="formSearch">
-            <div>
-               <h2>Procurar Projetos</h2>
+   <head>
+      <title>AlanDev2 Home</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="sources/reset.css">
+      <link rel="stylesheet" href="assets/style.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <script src="projects.json"></script>
+      <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+   </head>
+   <body>
+      <header class="header">
+         <div class="title">
+            <a href="">AlanDev2</a>
+         </div>
+         <nav class="nav">
+            <ul>
+               <li>
+                  <a href="">Contato</a>
+               </li>
+            </ul>
+         </nav>
+      </header>
+      <section class="section">
+         <div class="container">
+            <div class="formSearch">
+               <div>
+                  <h2>PROJETOS</h2>
+               </div>
+               <div>
+                  <form action="#">
+                     <input type="text" placeholder="Repositorio">
+                     <button><i class="fa fa-search" aria-hidden="true"></i></button>
+                  </form>
+               </div>
             </div>
             <div>
-               <form action="#">
-                  <input type="text" placeholder="Nome do repositorio">
-                  <button><i class="fa fa-search" aria-hidden="true"></i></button>
-               </form>
+               <ul class="projects"></ul>
             </div>
          </div>
-         <div class="repositories">
-            <div>REPO1</div>
-            <div>REPO1</div>
-            <div>REPO1</div>
-            <div>REPO1</div>
-         </div>
-      </div>
-   </section>
-</body>
+      </section>
+      <script src="script.js"></script>
+   </body>
 </html>
