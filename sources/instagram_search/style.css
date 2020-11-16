@@ -1,3 +1,101 @@
+*{
+  font-family: Arial;
+  font-size: 1.2rem;
+}
+
+/* body{
+  display: flex;
+  flex-direction: column;
+} */
+
+.header {
+  background: #000;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: center;
+  font-family: Arial;
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.title a {
+  color: white;
+}
+
+.nav ul {
+  display: flex;
+}
+
+.nav ul li a{
+  background: tomato;
+  margin: 0 10px;
+  font-size: 1.4rem;
+  text-decoration: none;
+  padding: 10px;
+  color: white;
+}
+
+.nav ul li a:hover{
+  background: #fff;
+  color: #000;
+}
+
+.section {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
 .container {
-  background: red;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.container div {
+  margin: 10px 0;
+}
+
+.container .user {
+  width: 80%;
+  margin: 0 auto;
+  height: 600px;
+}
+
+.formSearch{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-size: 2.4rem;
+}
+
+.formSearch h2{
+  
+}
+
+.input{
+
+}
+
+.input input{
+  width: 220px;
+}
+
+@media(max-width: 252px){
+  .projects .features p {
+    margin: 15px 0;
+  }
+
+  .projects .features a {  
+    width: 100%;
+  }
+
+  .formSearch{
+    justify-content: center;
+  }
 }
